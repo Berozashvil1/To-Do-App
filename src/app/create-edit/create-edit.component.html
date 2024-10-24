@@ -1,0 +1,28 @@
+<h2>{{ id ? 'update todo': 'Create Cew Task'}}</h2>
+
+<form [formGroup]="form" [style]="invalidForm ? {'border': '1px solid red'}:{'border': '1px solid black'}">
+    <label > Title:         
+        <input type="text" formControlName="title">
+    </label>
+    <label > Deadline:
+        <input type="date"  formControlName="deadline">
+    </label>
+    <label > Responsible Person:
+        <select  formControlName="responsiblePersonName">    
+            <option value="" disabled [selected]="true" >Choose Person</option>       
+                <option
+                 *ngFor="let person of persons | async ; let i=index"
+                 [value]="person.name" 
+                 >
+                 {{person.name}}
+                </option>
+        </select>
+    </label>
+    <div class="actions">
+        <button (click)="onsubmit()"> save </button>
+        <button (click)="close()">close</button>
+    </div>
+    <div *ngIf="invalidForm" class="error">
+        All fields are required
+    </div>
+</form>

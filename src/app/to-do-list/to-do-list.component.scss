@@ -1,0 +1,23 @@
+tbody,thead,td,tr,th{
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+td,th{
+    text-align: center;
+}
+
+table{
+    width: 55%;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+button{
+    border-radius: 10px;
+}
+
+ng-template{
+    margin: 0 auto;
+}
