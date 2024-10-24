@@ -8,7 +8,7 @@
     <table>
         <thead>
             <tr>
-                <th style="color: red; font-weight: bold; width: 20px;">N</th>
+                <th style="color: red; font-weight: bold;">N</th>
                 <th style="color: red; font-weight: bold;">Title</th>
                 <th style="color: red; font-weight: bold;">Starting Date</th>
                 <th style="color: red; font-weight: bold;">Deadline Date</th>
@@ -20,7 +20,7 @@
         <tbody>
             <ng-container *ngIf="todos.length>0; else eleseBlock">
                 <tr *ngFor="let todo of todos;  let i=index"
-                 [style]="todo.status==todoStatus.pending? {'background': '#FFFF33'}: {'background': 'lime'}"
+                 [style]="todo.status==todoStatus.pending? {'background': 'lightgrey'}: {'background': 'lime'}"
                  >
                     <td>{{i+1}}</td>
                     <td>{{todo.title}}</td>

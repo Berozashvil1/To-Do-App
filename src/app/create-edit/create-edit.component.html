@@ -8,8 +8,7 @@
         <input type="date"  formControlName="deadline">
     </label>
     <label > Responsible Person:
-        <select  formControlName="responsiblePersonName">    
-            <option value="" disabled [selected]="true" >Choose Person</option>       
+        <select  formControlName="responsiblePersonName">         
                 <option
                  *ngFor="let person of persons | async ; let i=index"
                  [value]="person.name" 
