@@ -1,6 +1,6 @@
-<h2>{{ id ? 'update todo': 'Create Cew Task'}}</h2>
+<h2>{{ id ? 'Update Task': 'Create Cew Task'}}</h2>
 
-<form [formGroup]="form" [style]="invalidForm ? {'border': '1px solid red'}:{'border': '1px solid black'}">
+<form [formGroup]="form" [style]="invalidForm ? {'border': '3px solid red'}:{'border': '1px solid black'}">
     <label > Title:         
         <input type="text" formControlName="title">
     </label>
@@ -19,8 +19,8 @@
         </select>
     </label>
     <div class="actions">
-        <button (click)="onsubmit()"> save </button>
-        <button (click)="close()">close</button>
+        <button style="background-color: rgb(38, 197, 38);" (click)="onsubmit()"> save </button>
+        <button style="background-color: red;" (click)="close()">close</button>
     </div>
     <div *ngIf="invalidForm" class="error">
         All fields are required

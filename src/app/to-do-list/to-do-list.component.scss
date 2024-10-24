@@ -1,23 +1,38 @@
-tbody,thead,td,tr,th{
+tbody,thead,th,td{
     border-collapse: collapse;
     border: 1px solid black;
-    border-radius: 10px;
-}
-
-td,th{
     text-align: center;
 }
 
-table{
+h2{
+    text-align: center;
+}
+
+header{
     width: 55%;
-    border: 2px solid red;
-    border-radius: 10px;
+    margin: 0 auto;
+}
+
+tr{
+    height: 40px;
+}
+
+table{
+    margin: 0 auto;
+    width: 55%;
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
 button{
     border-radius: 10px;
 }
 
-ng-template{
-    margin: 0 auto;
+#add{
+    background-color: black;
+    color: white;
+    border-radius: 0;
+    border: none;
+    height: 40px;
+    width: 80px;
 }
